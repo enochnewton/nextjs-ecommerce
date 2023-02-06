@@ -1,5 +1,5 @@
 import React from "react";
-import { AiOutlineDelete } from "react-icons/Ai";
+import { AiOutlineDelete } from "react-icons/ai";
 import { HiOutlineMinus, HiOutlinePlus } from "react-icons/hi";
 import { useDispatch } from "react-redux";
 import { removeItem, toggleCartQuantity } from "../features/productSlice";

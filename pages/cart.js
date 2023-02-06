@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { toast } from "react-hot-toast";
-import { AiOutlineArrowLeft } from "react-icons/Ai";
+import { AiOutlineArrowLeft } from "react-icons/ai";
 import { FiShoppingBag } from "react-icons/fi";
 import { useDispatch, useSelector } from "react-redux";
 import { CartItem } from "../components";

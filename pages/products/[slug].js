@@ -6,7 +6,7 @@ import {
   AiOutlineHeart,
   AiOutlineShoppingCart,
   AiOutlineStar,
-} from "react-icons/Ai";
+} from "react-icons/ai";
 import { useDispatch } from "react-redux";
 import Product from "../../components/Product";
 import { addToCart } from "../../features/productSlice";

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { BsFillPersonCheckFill, BsPerson } from "react-icons/bs";
-import { AiOutlineShoppingCart } from "react-icons/Ai";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 import { styles } from "../styles/styles";
 import { useDispatch, useSelector } from "react-redux";
 import { FiLogIn, FiLogOut } from "react-icons/fi";
@@ -76,7 +76,7 @@ const Navbar = () => {
       variants={navVariants}
       initial='hidden'
       animate='show'
-      className=' w-full bg-white sm:bg-inherit'
+      className='w-full bg-white  sm:bg-inherit'
     >
       <div className='sm:mt-[36px] sm:w-[90%] h-[65px] sm:h-auto relative text-zinc-700 sm:mx-auto'>
         <div className='flex items-center mt-2'>
