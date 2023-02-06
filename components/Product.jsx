@@ -6,7 +6,7 @@ import { zoomIn } from "../lib/motion";
 
 const SingleProduct = ({ name, price, image, category, slug, parent }) => {
   return (
-    <motion.article variants={zoomIn(0.1, 0.3)} initial='hidden' animate='show'>
+    <motion.article variants={zoomIn(0, 0.1)} initial='hidden' animate='show'>
       <Link href={`/products/${slug.current}`}>
         <div
           className={`flex flex-col shadow-xl min-h-[365px] ${

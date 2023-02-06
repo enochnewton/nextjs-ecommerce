@@ -5,8 +5,6 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase/config";
 import { toast } from "react-hot-toast";
 import { useRouter } from "next/router";
-import { motion } from "framer-motion";
-import { containerVariants } from "../lib/motion";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
@@ -35,11 +33,7 @@ const SignUp = () => {
     });
   };
   return (
-    <motion.div
-      variants={containerVariants}
-      initial='hidden'
-      exit='exit'
-      animate='visible'
+    <div
       onSubmit={handleRegisterUser}
       className='bg-white shadow-2xl sm:w-[45%] mx-auto'
     >
@@ -115,7 +109,7 @@ const SignUp = () => {
           </h1>
         </div>
       </form>
-    </motion.div>
+    </div>
   );
 };
 

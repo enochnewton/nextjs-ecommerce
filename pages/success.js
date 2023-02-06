@@ -3,8 +3,6 @@ import React, { useEffect } from "react";
 import { BsBagCheckFill } from "react-icons/bs";
 import { runFireWorks, runSchoolPride } from "../lib/utils";
 import { styles } from "../styles/styles";
-import { motion } from "framer-motion";
-import { containerVariants } from "../lib/motion";
 
 const Success = () => {
   useEffect(() => {
@@ -13,13 +11,7 @@ const Success = () => {
   }, []);
 
   return (
-    <motion.div
-      variants={containerVariants}
-      initial='hidden'
-      exit='exit'
-      animate='visible'
-      className='sm:min-h-[69vh] bg-white min-h-[60vh]'
-    >
+    <div className='sm:min-h-[69vh] bg-white min-h-[60vh]'>
       <div className={`${styles.success}`}>
         <p className='icon'>
           <BsBagCheckFill />
@@ -40,7 +32,7 @@ const Success = () => {
           </button>
         </Link>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

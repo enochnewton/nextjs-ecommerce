@@ -11,12 +11,7 @@ import { useDispatch } from "react-redux";
 import Product from "../../components/Product";
 import { addToCart } from "../../features/productSlice";
 import { client, urlFor } from "../../lib/client";
-import {
-  containerVariants,
-  fadeIn,
-  textContainer,
-  textVariant,
-} from "../../lib/motion";
+import { fadeIn, textContainer, textVariant } from "../../lib/motion";
 import { motion } from "framer-motion";
 
 const SingleProduct = ({ product, products }) => {
@@ -30,12 +25,7 @@ const SingleProduct = ({ product, products }) => {
   };
 
   return (
-    <motion.div
-      variants={containerVariants}
-      initial='hidden'
-      exit='exit'
-      animate='visible'
-    >
+    <div>
       <article className='mt-3'>
         <div className='relative sm:flex sm:mt-10'>
           <div className='w-[90%] sm:flex-[1] mx-auto'>
@@ -127,7 +117,7 @@ const SingleProduct = ({ product, products }) => {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

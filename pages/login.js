@@ -12,8 +12,6 @@ import { auth } from "../firebase/config";
 import { toast } from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 import { userLoggedIn } from "../features/authSlice";
-import { motion } from "framer-motion";
-import { containerVariants } from "../lib/motion";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -21,7 +19,7 @@ const SignIn = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   const router = useRouter();
-  const { isUserLoggedIn, userName } = useSelector(state => state.auth);
+  const { userName } = useSelector(state => state.auth);
   const dispatch = useDispatch();
 
   const handleLogin = e => {
@@ -67,13 +65,7 @@ const SignIn = () => {
   };
 
   return (
-    <motion.div
-      variants={containerVariants}
-      initial='hidden'
-      exit='exit'
-      animate='visible'
-      className='sm:w-[45%] mx-auto'
-    >
+    <div className='sm:w-[45%] mx-auto'>
       <form
         onSubmit={handleLogin}
         className='flex flex-col contact-form text-[1.3rem] font-[500] mb-[1.6rem] '
@@ -141,7 +133,7 @@ const SignIn = () => {
           Login with Google
         </button>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

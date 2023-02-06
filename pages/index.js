@@ -3,23 +3,16 @@ import { useDispatch } from "react-redux";
 import { CategoryDesktop, CategoryMobile } from "../components";
 import { productCart } from "../features/productSlice";
 import { client } from "../lib/client";
-import { motion } from "framer-motion";
-import { containerVariants } from "../lib/motion";
 
 const Products = ({ products }) => {
   const dispatch = useDispatch();
   dispatch(productCart(products));
 
   return (
-    <motion.div
-      variants={containerVariants}
-      initial='hidden'
-      exit='exit'
-      animate='visible'
-    >
+    <div>
       <CategoryMobile />
       <CategoryDesktop />
-    </motion.div>
+    </div>
   );
 };
 

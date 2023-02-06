@@ -7,8 +7,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { CartItem } from "../components";
 import { clearCart } from "../features/productSlice";
 import getStripe from "../lib/getStripe";
-import { motion } from "framer-motion";
-import { containerVariants } from "../lib/motion";
 
 const Cart = () => {
   const { cart, totalQty, totalPrice } = useSelector(state => state.product);
@@ -34,13 +32,7 @@ const Cart = () => {
   };
 
   return (
-    <motion.div
-      variants={containerVariants}
-      initial='hidden'
-      exit='exit'
-      animate='visible'
-      className='absolute top-0 right-0 w-full bg-[#fcffe7]'
-    >
+    <div className='absolute top-0 right-0 w-full bg-[#fcffe7]'>
       <div className='relative sm:mx-auto sm:w-[60%]'>
         {/* top */}
         <div className='w-[96%] mt-4 mb-[100px] mx-auto'>
@@ -90,7 +82,7 @@ const Cart = () => {
           </div>
         )}
       </div>
-    </motion.div>
+    </div>
   );
 };
 

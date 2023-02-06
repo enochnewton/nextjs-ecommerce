@@ -51,7 +51,7 @@ const CategoryMobile = () => {
           </div>
           {dropDown && (
             <motion.div
-              variants={fadeIn("up", "spring", 0, 0.5)}
+              variants={fadeIn("up", "spring", 0.1, 0.3)}
               initial='hidden'
               animate='show'
               className='absolute flex flex-col h-[100px] w-[100px] left-0 justify-between p-3 top-9 rounded-2xl bg-pale-orange'
