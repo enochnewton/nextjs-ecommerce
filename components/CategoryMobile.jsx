@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { AiOutlineArrowDown } from "react-icons/Ai";
+import { AiOutlineArrowDown } from "react-icons/ai";
 import Image from "next/image";
 import ProductContainer from "./ProductContainer";
 import { useDispatch, useSelector } from "react-redux";
