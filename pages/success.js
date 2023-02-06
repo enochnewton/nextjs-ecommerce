@@ -7,7 +7,6 @@ import { styles } from "../styles/styles";
 const Success = () => {
   useEffect(() => {
     runFireWorks();
-    runSchoolPride();
   }, []);
 
   return (

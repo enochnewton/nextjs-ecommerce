@@ -27,11 +27,10 @@ const SignIn = () => {
     setEmail("");
     setPassword("");
     const myPromise = signInWithEmailAndPassword(auth, email, password)
-      .then(({ user }) => {
+      .then(() => {
         router.push("/");
       })
       .catch(error => {
-        const errorCode = error.code;
         const errorMessage = error.message;
         toast.error(errorMessage);
       });
@@ -46,14 +45,13 @@ const SignIn = () => {
   const provider = new GoogleAuthProvider();
   const loginWithGoogle = () => {
     const myPromise = signInWithPopup(auth, provider)
-      .then(({ user }) => {
+      .then(() => {
         dispatch(userLoggedIn());
         setEmail("");
         setPassword("");
         router.push("/");
       })
       .catch(error => {
-        const errorCode = error.code;
         const errorMessage = error.message;
         toast.error(errorMessage);
       });
