@@ -28,7 +28,7 @@ const SignIn = () => {
     setPassword("");
     const myPromise = signInWithEmailAndPassword(auth, email, password)
       .then(({ user }) => {
-        router.back();
+        router.push("/");
       })
       .catch(error => {
         const errorCode = error.code;
@@ -50,7 +50,7 @@ const SignIn = () => {
         dispatch(userLoggedIn());
         setEmail("");
         setPassword("");
-        router.back();
+        router.push("/");
       })
       .catch(error => {
         const errorCode = error.code;
