@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 import { AiOutlineDelete } from "react-icons/Ai";
 import { HiOutlineMinus, HiOutlinePlus } from "react-icons/hi";
